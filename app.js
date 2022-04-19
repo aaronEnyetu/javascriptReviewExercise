@@ -39,11 +39,12 @@ console.log(`lessThan100(100, 10) === false : ${lessThan100(100, 10) === false}`
 // and a third parameter called middle_name which is optional.
 // The function should return a string with the first, middle and last names
 
-function getFormattedName(first, last, middle,) {
-    if (middle == (null)){
-    return first + ' ' + last;} else {
-        return first + ' ' + middle + ' ' + last }
-    
+function getFormattedName(first, last, middle) {
+    if (!middle){
+        return first + ' ' + last;} 
+    else {
+        return first + ' ' + middle + ' ' + last;
+    }
 }
 
 console.log(
@@ -68,9 +69,9 @@ console.log(
 //    number of days for Feb. The default value for the year should be
 //    the current year
 function daysInMonth(month) {
-if (month == 2) {
+    if (month === 2) {
         return 29;
-    } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+    } else if (month === 4 || month === 6 || month === 9 || month === 11) {
         return 30;
     } else {
         return 31;
